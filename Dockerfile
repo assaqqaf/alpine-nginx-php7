@@ -8,6 +8,7 @@ RUN apk upgrade -U && \
     git \
     php7 \
     php7-xml \
+    php7-mysqli \
     php7-xsl \
     php7-pdo \
     php7-mcrypt \
@@ -22,8 +23,7 @@ RUN apk upgrade -U && \
     php7-mbstring \
     php7-session \
     php7-pcntl
-    
-RUN docker-php-ext-install mysqli
+
 
 COPY /rootfs /
 
