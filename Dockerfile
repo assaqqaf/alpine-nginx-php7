@@ -8,7 +8,6 @@ RUN apk upgrade -U && \
     git \
     php7 \
     php7-xml \
-    php7-mysqli \
     php7-xsl \
     php7-pdo \
     php7-mcrypt \
