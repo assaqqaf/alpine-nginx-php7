@@ -5,6 +5,7 @@ MAINTAINER Sebastian Knoth <sk@bytepark.de>
 RUN apk upgrade -U && \
     apk --update --repository=http://dl-4.alpinelinux.org/alpine/edge/testing add \
     openssl \
+    git \
     php7 \
     php7-xml \
     php7-xsl \
@@ -21,6 +22,8 @@ RUN apk upgrade -U && \
     php7-mbstring \
     php7-session \
     php7-pcntl
+    
+RUN docker-php-ext-install mysqli
 
 COPY /rootfs /
 
